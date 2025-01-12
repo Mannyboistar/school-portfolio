@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manny Portfolio</title>
+    <style>
+        /* General Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            position: relative; /* Needed for the overlay */
+            background-image: url('images/nice background.jpg'); /* Replace 'your-image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Add a dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: -1; /* Place it behind the content */
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #6e7dff, #000000);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+        header a {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header a:hover {
+            background-color: #ddd;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        nav ul li a:hover {
+            color: #000000;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #fff; /* White text for visibility */
+        }
+
+        /* My Work Section */
+        .work {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .work .project {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .work .project:hover {
+            transform: scale(1.05);
+        }
+        .project img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .project .content {
+            padding: 20px;
+        }
+        .project .content h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .project .content p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Add a box around the "View Project" link */
+        .project .content a {
+            display: inline-block;
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project .content a:hover {
+            background-color: #ddd;
+            transform: translateY(-2px);
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .skills .skill {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .skills .skill h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .skills .skill p {
+            font-size: 1.125rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .contact a {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            background-color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            .work .project,
+            .skills .skill {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header (Hero Section) -->
+<header>
+    <h1>Manny's Portfolio</h1>
+    <p>Web Developer | Designer | Creator</p>
+    <a href="#work">View My Work</a>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi! welcome to my website, my name is Emmanuel, I'm an iCan student that attends Heritage regional highschool. These past 5 years in the ican program i've learned many amazing things about technology whether it's working with curcuits, photoshopping images, coding in python or creating mini games. So in this portfolio I want to show you some of my work through out the years of my iCan experience. </p>
+</section>
+
+<!-- My Work Section -->
+<section id="work">
+    <h2>My Work</h2>
+    <div class="work">
+        <div class="project">
+            <img src="images/youtube.png" alt="Project 1">
+            <div class="content">
+                <h3>Project 1: This year's personal project</h3>
+                <p>This year's personal project about making videos.</p>
+                <a href="Project1.html">View Project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/music.jpg" alt="Project 2">
+            <div class="content">
+                <h3>Project 2: Last year's personal project</h3>
+                <p>Last years personal project about making music.</p>
+                <a href="Project2.html">View Project 2</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/other work.png" alt="Project 3">
+            <div class="content">
+                <h3>Project 3: other work</h3>
+                <p>Other work I did</p>
+                <a href="Project3.html">View Project 3</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, React.js</p>
+        </div>
+        <div class="skill">
+            <h3>Backend</h3>
+            <p>blender, vscode</p>
+        </div>
+        <div class="skill">
+            <h3>Design</h3>
+            <p>UI/UX, Figma, Photoshop, Illustrator</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you’re interested in working together, feel free to reach out! 6181333@portal.rsb.qc.ca</p>
+    <a href="6181333@portal.rsb.qc.ca">Contact Me</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

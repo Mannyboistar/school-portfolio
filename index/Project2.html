@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 2 - Personal Portfolio</title>
+    <style>
+        /* General Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            position: relative; /* Needed for the overlay */
+            background-image: url('images/music studio.jpeg'); /* Replace 'your-image.jpg' with your image file */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Add a dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: -1; /* Place it behind the content */
+        }
+
+        /* Return Button */
+        .return {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .return button {
+            padding: 10px 20px;
+            background-color: #4f4fff;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .return button:hover {
+            background-color: #6e7dff;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6e7dff, #4f4fff);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.25rem;
+        }
+
+        /* Audio Section */
+        .audio {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .audio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+        .audio .audio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .audio .audio-container audio {
+            width: 45%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Return Button (placed at the top) -->
+<section class="return">
+    <a href="index.html">
+        <button>Return to Portfolio</button>
+    </a>
+</section>
+
+<!-- Header for Project 2 -->
+<header>
+    <h1>Project 2: Last Year's Personal Project</h1>
+    <p>This project was about creating beats</p>
+</header>
+
+<!-- Audio Section -->
+<section class="audio">
+    <h2>Project Demonstrations</h2>
+    <div class="audio-container">
+        <!-- Audio 1 -->
+        <audio controls>
+            <source src="sounds/Different times.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 2 -->
+        <audio controls>
+            <source src="sounds/drake.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 3 -->
+        <audio controls>
+            <source src="sounds/flute.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 4 -->
+        <audio controls>
+            <source src="sounds/Day bright.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 5 -->
+        <audio controls>
+            <source src="sounds/Japanese Fun'iki.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 6 -->
+        <audio controls>
+            <source src="sounds/ocarina.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 7 -->
+        <audio controls>
+            <source src="sounds/Pink Diamonds.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 8 -->
+        <audio controls>
+            <source src="sounds/Troubled moments.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 9 -->
+        <audio controls>
+            <source src="sounds/uzi.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 10 -->
+        <audio controls>
+            <source src="sounds/Car love.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Audio 11 -->
+        <audio controls>
+            <source src="sounds/Game Boy.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

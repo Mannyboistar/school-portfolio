@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 3 - other work</title>
+    <style>
+        /* General Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            background-image: url('images/plain dark back.jpg'); /* Replace with the path to your image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Make the background fixed while scrolling */
+        }
+
+        /* Add a dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: -1; /* Ensure the overlay is behind the content */
+        }
+
+        /* Return Button */
+        .return {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .return button {
+            padding: 10px 20px;
+            background-color: #ff4f4f;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .return button:hover {
+            background-color: #ff6e6e;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6e7dff, #000000);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.25rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .work .project {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .work .project img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .project .content {
+            padding: 20px;
+        }
+        .project .content h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Return Button (placed at the top) -->
+<section class="return">
+    <a href="index.html">
+        <button>Return to Portfolio</button>
+    </a>
+</section>
+
+<!-- Header for Project 3 -->
+<header>
+    <h1>Project 3: Other work</h1>
+    <p>Other work I did this year and last year</p>
+</header>
+
+<!-- Project Images Section -->
+<section>
+    <h2>Project Images</h2>
+    <div class="work">
+        <div class="project">
+            <img src="images/mr bean.png" alt="Design Mockup 1">
+            <div class="content">
+                <h3>Mr.Bean art</h3>
+                <p>Mr.Bean photoshop</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/mathematica house.png" alt="Design Mockup 2">
+            <div class="content">
+                <h3>Mathematica house</h3>
+                <p>house coded in mathematica</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/planets.png" alt="Design Mockup 1">
+            <div class="content">
+                <h3>Mathematica planets</h3>
+                <p>planets coded in mathematica</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/space invaders talktome.png" alt="Design Mockup 2">
+            <div class="content">
+                <h3>space invaders</h3>
+                <p>space invader game</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/reciprocator.png" alt="Design Mockup 1">
+            <div class="content">
+                <h3>reciprocator</h3>
+                <p>reciprocator built in inventor</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/atm code.png" alt="Design Mockup 2">
+            <div class="content">
+                <h3>atm python code</h3>
+                <p>the python code of an atm</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/atm ui.png" alt="Design Mockup 1">
+            <div class="content">
+                <h3>atm ui</h3>
+                <p>The ui of the atm python code</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/figma friendazon.png" alt="Design Mockup 2">
+            <div class="content">
+                <h3>App</h3>
+                <p>Made an app</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/Binary poster.png" alt="Design Mockup 1">
+            <div class="content">
+                <h3>Binary poster</h3>
+                <p>A poster showing numbers in binary</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/house project.png" alt="Design Mockup 2">
+            <div class="content">
+                <h3>house project</h3>
+                <p>Final sketch for house project</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Manny's Portfolio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
